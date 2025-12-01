@@ -1,6 +1,8 @@
 # odin-etch-a-sketch
 TOP's Project: Etch-a-Sketch
 
+Create a Etch-a-Sketch game by using DOM manipulation and event handlers in JavaScript.
+
 To-Do:
 - initial structure with fixed values
 - arbitrary size of square: 30px by 30px due to 500px by 500px initial constraints and gap consideration
@@ -14,3 +16,11 @@ To-Do:
 
 Notes:
 - box-sizing: border-box; allows squares to collapse internally
+- instead of using event delegation, make use of:
+
+let element = document.querySelectorAll(".elementClass");
+element.forEach((item)=>{
+    item.addEventListener("mouseleave",()=>{
+    item.setAttribute("style","background-color:red;");
+    })
+})
