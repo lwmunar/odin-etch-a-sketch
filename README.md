@@ -24,3 +24,9 @@ element.forEach((item)=>{
     item.setAttribute("style","background-color:red;");
     })
 })
+
+- be careful when using parent.replaceChildren() to clear child nodes as it may remove the event listeners attached to it
+
+- checking the type of CSS styles returns strings!
+    - typeof square.style.opacity 
+    - typeof square.getAttribute("style")
